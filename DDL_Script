@@ -1,0 +1,61 @@
+
+CREATE TABLE sales_Orders (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP_TEXT,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP_TEXT,
+  modifiedBy NVARCHAR(255),
+  email NVARCHAR(255) NOT NULL,
+  firstname NVARCHAR(255),
+  lastname NVARCHAR(255),
+  country NVARCHAR(255),
+  createon DATETIME_TEXT,
+  deliverydate DATETIME_TEXT,
+  orderstatus INTEGER,
+  imageurl NVARCHAR(255),
+  PRIMARY KEY(ID)
+);
+
+CREATE TABLE sales_OrderItems (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP_TEXT,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP_TEXT,
+  modifiedBy NVARCHAR(255),
+  name NVARCHAR(255),
+  description NVARCHAR(255),
+  releasedate DATETIME_TEXT,
+  discontinueddate DATETIME_TEXT,
+  price DECIMAL(12, 2),
+  height DECIMAL(15, 3),
+  width DECIMAL(13, 3),
+  depth DECIMAL(12, 2),
+  quantity DECIMAL(16, 2),
+  unitofmeasure NVARCHAR(255),
+  order_ID NVARCHAR(36),
+  PRIMARY KEY(ID)
+);
+
+CREATE TABLE sales_Orders_texts (
+  locale NVARCHAR(14) NOT NULL,
+  ID NVARCHAR(36) NOT NULL,
+  country NVARCHAR(255),
+  PRIMARY KEY(locale, ID)
+);
+
+CREATE VIEW localized_sales_Orders AS SELECT
+  L_0.ID,
+  L_0.createdAt,
+  L_0.createdBy,
+  L_0.modifiedAt,
+  L_0.modifiedBy,
+  L_0.email,
+  L_0.firstname,
+  L_0.lastname,
+  coalesce(localized_1.country, L_0.country) AS country,
+  L_0.createon,
+  L_0.deliverydate,
+  L_0.orderstatus,
+  L_0.imageurl
+FROM (sales_Orders AS L_0 LEFT JOIN sales_Orders_texts AS localized_1 ON localized_1.ID = L_0.ID AND localized_1.locale = session_context( '$user.locale' ));
+
