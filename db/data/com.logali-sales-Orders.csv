@@ -1,0 +1,4 @@
+ID;createdAt;createdBy;modifiedAt;modifiedBy;email;firstname;lastname;country;createdon;deliverydate;orderstatus;imageurl
+f1a23bcd-9e01-4a2d-8e55-111111111111;2025-09-01T10:00:00Z;admin;2025-09-01T10:00:00Z;admin;john.doe@example.com;John;Doe;USA;2025-09-01;2025-09-10;1;https://picsum.photos/200
+a2b34cde-8f12-4b3d-9f66-222222222222;2025-09-01T11:00:00Z;admin;2025-09-01T11:00:00Z;admin;jane.smith@example.com;Jane;Smith;Germany;2025-09-01;2025-09-12;2;https://picsum.photos/201
+c3d45def-7a23-4c4e-af77-333333333333;2025-09-01T12:00:00Z;admin;2025-09-01T12:00:00Z;admin;pedro.garcia@example.com;Pedro;García;Spain;2025-09-01;2025-09-15;3;https://picsum.photos/202

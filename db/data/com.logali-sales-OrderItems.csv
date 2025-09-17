@@ -1,0 +1,5 @@
+ID;name;description;releasedate;discontinueddate;price;height;width;depth;quantity;unitofmeasure;to_Orders_ID
+11aa22bb-3344-5566-7788-aaaaaaaaaaaa;Laptop;High performance laptop;2025-01-01T00:00:00Z;;1200.0;2.5;35.0;24.0;1.0;pcs;f1a23bcd-9e01-4a2d-8e55-111111111111
+22bb33cc-4455-6677-8899-bbbbbbbbbbbb;Mouse;Wireless mouse;2024-12-15T00:00:00Z;;25.99;3.0;6.0;11.5;2.0;pcs;f1a23bcd-9e01-4a2d-8e55-111111111111
+33cc44dd-5566-7788-9900-cccccccccccc;Phone;Latest smartphone;2025-03-10T00:00:00Z;;799.0;0.8;7.5;15.0;1.0;pcs;a2b34cde-8f12-4b3d-9f66-222222222222
+44dd55ee-6677-8899-0011-dddddddddddd;Tablet;10-inch tablet;2025-04-20T00:00:00Z;;450.0;0.6;16.0;24.5;1.0;pcs;c3d45def-7a23-4c4e-af77-333333333333
